@@ -30,7 +30,11 @@ const Navbar = () => {
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
       <Link href="/" passHref legacyBehavior>
     <a className="text-2xl md:text-5xl text-white font-semibold">
-      <Image src={"/images/logoimage.png"} alt="Logo" width={100} height={50} />
+      <Image 
+      src="/images/Logoimage.png"
+       alt="Logo" 
+       width={100} 
+       height={50} />
     </a>      
   </Link>
         <div className="mobile-menu block md:hidden">
