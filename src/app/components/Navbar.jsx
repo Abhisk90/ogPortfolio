@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import Image from "next/image";
 
 const navLinks = [
   {
@@ -20,6 +21,8 @@ const navLinks = [
   },
 ];
 
+const logoImage="/images/logoimage.png"
+
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
@@ -30,8 +33,9 @@ const Navbar = () => {
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          LOGO
-        </Link>
+  <a className="text-2xl md:text-5xl text-white font-semibold">
+    <Image src={logoImage} alt="Logo" width={100} height={50} /> {/* Adjust width and height as needed */}
+  </a>        </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
             <button
