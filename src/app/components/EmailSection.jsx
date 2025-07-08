@@ -15,34 +15,34 @@ const EmailSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
   
-    const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
-    };
+    // const data = {
+    //   email: e.target.email.value,
+    //   subject: e.target.subject.value,
+    //   message: e.target.message.value,
+    // };
   
-    try {
-      const response = await fetch('/api/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+    // try {
+    //   const response = await fetch('/api/send', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify(data),
+    //   });
   
-      const responseData = await response.json();
+    //   const responseData = await response.json();
   
-      if (response.ok) {
-        console.log('Message sent.');
-        setEmailSubmitted(true);
-      } else {
-        console.error('Failed to send message:', responseData.error);
-      }
-    } catch (error) {
-      console.error('Error sending message:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
+    //   if (response.ok) {
+    //     console.log('Message sent.');
+    //     setEmailSubmitted(true);
+    //   } else {
+    //     console.error('Failed to send message:', responseData.error);
+    //   }
+    // } catch (error) {
+    //   console.error('Error sending message:', error);
+    // } finally {
+    //   setIsSubmitting(false);
+    // }
   };
 
   return (
