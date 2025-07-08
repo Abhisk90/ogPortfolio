@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const HeroSection = () => {
-  // Find the longest animated phrase for min-width
   const longestPhrase = "Web Developer";
   return (
     <section className="min-h-screen flex items-center justify-center py-16">
